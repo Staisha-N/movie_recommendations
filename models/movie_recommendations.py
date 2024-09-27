@@ -1,4 +1,10 @@
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from torch.utils.data import Dataset, DataLoader
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from sklearn.preprocessing import LabelEncoder
 
 movies = pd.read_csv('./data/movies.csv')
 users = pd.read_csv('./data/users.csv')
