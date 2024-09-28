@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommendations</title>
+  </head>
+  <body>
+    <h1>Top Recommendations</h1>
+    <ul>
+      {% for movie in recommendations %}
+      <li>Title: {{ movie.title }}, Average Rating: {{ movie.rating }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+  </body>
+</html>

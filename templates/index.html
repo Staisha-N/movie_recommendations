@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Recommendation</title>
+  </head>
+  <body>
+    <h1>Movie Recommendation System</h1>
+    <form action="/recommend" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required /><br /><br />
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="F">Female</option>
+        <option value="M">Male</option></select
+      ><br /><br />
+
+      <input type="submit" value="Get Recommendations" />
+    </form>
+  </body>
+</html>
