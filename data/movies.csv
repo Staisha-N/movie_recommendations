@@ -1,11 +1,11 @@
-movieId,title,description
-1,Toy Story,Animation | Adventure | Comedy
-2,Jumanji,Action | Adventure | Fantasy
-3,Barbie,Adventure | Comedy | Family
-4,Legally Blonde,Comedy | Romance
-5,The Sound of Music,Musical | Drama
-6,Frozen,Animation | Adventure | Musical
-7,My Fair Lady,Musical | Romance | Drama
-8,Paw Patrol: The Mighty Movie,Animation | Adventure | Family
-9,Avengers,Action | Adventure | Sci-Fi
-10,Sex in the City,Comedy | Romance
+movieId,title,genre1,genre2
+1,Toy Story,1,2
+2,Jumanji,4,5
+3,Barbie,3,6
+4,Legally Blonde,3,7
+5,The Sound of Music,8,9
+6,Frozen,1,2
+7,Saving Private Ryan,9,12
+8,Paw Patrol: The Mighty Movie,1,6
+9,Avengers,10,11
+10,Sex in the City,3,7

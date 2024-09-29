@@ -41,7 +41,7 @@ func main() {
     writer := csv.NewWriter(file)
     defer writer.Flush()
 
-    writer.Write([]string{"Age", "Genre"})
+    writer.Write([]string{"age", "genre"})
 
     //Scrape data
     doc.Find("tbody tr").Slice(0, 3).Each(func(index int, element *goquery.Selection) {
