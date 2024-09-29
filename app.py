@@ -7,7 +7,6 @@ app = Flask(__name__)
 movies = pd.read_csv('./data/movies.csv')
 users = pd.read_csv('./data/users.csv')
 ratings = pd.read_csv('./data/ratings.csv')
-age_genre_relations = pd.read_csv('./data/transformed_age_genre_relations.csv')
 
 @app.route('/')
 def index():
@@ -19,7 +18,7 @@ def recommend():
     user_age = int(request.form['age'])
 
     # Call the movie_recommendations function
-    recommendations = generate_recommendations(movies, users, ratings, age_genre_relations, user_gender, user_age)
+    recommendations = generate_recommendations(movies, users, ratings, user_gender, user_age)
 
     return render_template('recommendation.html', recommendations=recommendations)
 

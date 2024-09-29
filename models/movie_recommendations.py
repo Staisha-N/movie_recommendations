@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
+from models.genre_convert import transform_genres
 
 class MovieRatingsDataset(Dataset):
     def __init__(self, ratings, age_genre_relations, user_age):
@@ -36,7 +37,10 @@ class RatingPredictor(nn.Module):
         x = torch.cat([user_emb, movie_emb, genre_emb], dim=1)
         return self.fc(x)
 
-def generate_recommendations(movies, users, ratings, age_genre_relations, user_gender, user_age):
+def generate_recommendations(movies, users, ratings, user_gender, user_age):
+    transform_genres("./data/age_genre_relations.csv", "./data/transformed_age_genre_relations.csv")
+    age_genre_relations = pd.read_csv('./data/transformed_age_genre_relations.csv')
+
     filtered_users = users[(users['gender'] == user_gender) & 
                             (users['age'] >= user_age - 10) & 
                             (users['age'] <= user_age + 10)]
